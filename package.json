@@ -1,0 +1,70 @@
+{
+  "name": "mattfinucane",
+  "version": "2.4.0",
+  "description": "Static site generated with GoHugo",
+  "main": "",
+  "devDependencies": {
+    "autoprefixer": "^8.1.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "copy-webpack-plugin": "^4.3.1",
+    "core-js": "^2.5.3",
+    "css-loader": "^0.28.7",
+    "eslint": "^4.16.0",
+    "extract-loader": "^1.0.1",
+    "file-loader": "^1.1.5",
+    "jest": "^22.4.2",
+    "jshint": "^2.9.5",
+    "mini-css-extract-plugin": "^0.2.0",
+    "node-sass": "^4.7.2",
+    "postcss-loader": "^2.0.8",
+    "sass-loader": "^6.0.6",
+    "sinon": "^4.1.2",
+    "style-loader": "^0.20.3",
+    "uglifyjs-webpack-plugin": "^1.1.4",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.12",
+    "webpack-merge": "^4.1.1"
+  },
+  "scripts": {
+    "coverage": "jest --coverage",
+    "lint": "eslint .",
+    "test": "jest",
+    "css": "webpack --mode development --config webpack.common.js",
+    "start:dev": "webpack --mode development --config webpack.dev.js --progress --colors --watch --display-error-details",
+    "build": "webpack --mode production --config webpack.build.js"
+  },
+  "jest": {
+    "globals": {
+      "window": true
+    },
+    "rootDir": "./assets/scripts",
+    "coverageDirectory": "../../coverage",
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/matfin/mattfinucane.com.git"
+  },
+  "keywords": [
+    "static",
+    "gohugo",
+    "webpack",
+    "es6"
+  ],
+  "author": "Matt Finucane",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matfin/mattfinucane.com/issues"
+  },
+  "homepage": "https://mattfinucane.com",
+  "dependencies": {}
+}

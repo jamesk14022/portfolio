@@ -1,0 +1,40 @@
+version: '3'
+
+services:
+  mf-site:
+    container_name: mf_site
+    restart: on-failure
+    build:
+      context: .docker/site
+      dockerfile: Dockerfile
+      args:
+        hugo_version: "0.34"
+    volumes: 
+      - ./:/opt:rw
+    command: hugo -s /opt/site -b http://mattfinucane.build --config=./site/build.yml -d ../public
+
+  mf-nginx:
+    container_name: mf_nginx
+    build:
+      context: .docker/nginx
+      dockerfile: Dockerfile
+      args:
+        nginx_conf: nginx.build.conf
+    volumes:
+      - ./media:/opt/media:ro
+      - ./public:/opt/public:ro
+    links: 
+      - mf-site
+    ports:
+      - "80:80"
+    command: nginx -g "daemon off;"
+    
+  mf-webpack:
+    container_name: mf_webpack
+    build:
+      context: .
+      dockerfile: ./.docker/node/Dockerfile.build
+    volumes:
+      - .:/opt:rw
+      - /opt/node_modules
+    command: ["npm", "run", "build"]
