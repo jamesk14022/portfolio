@@ -202,3 +202,66 @@ section.cv-job {
     justify-content: center;
   }
 }
+
+/**
+ *  Nested section for the project overview.
+ */
+section.project {
+  display: flex;
+  flex-direction: row;
+  margin: $units * 2 $units * 6;
+  width: 70%;
+
+  figure {
+    background-color: $dark-green;
+    align-self: flex-start;
+
+    img {
+      display: block;
+      width: $units * 12.5;
+      height: auto;
+    }
+  }
+
+  aside {
+    width: 100%;
+    max-width: 70rem;
+  }
+
+  @include break(min-max, 0, $break-3) {
+    aside {
+      padding: 0 $units;
+    }
+  }
+
+
+  @include break(min-max, 0, $break-4) {
+    flex-direction: column;
+
+    figure {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-bottom: $units * 2;
+    }
+  }
+
+  @include break(min, $break-3) {
+    align-items: center;
+  }
+
+  @include break(min, $break-4) {
+    flex-direction: row-reverse;
+
+    figure {
+      width: $units * 12.5;
+      margin-left: $units * 2.5;
+    }
+  }
+
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+

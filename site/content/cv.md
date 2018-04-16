@@ -6,7 +6,6 @@ identifier:		"cv"
 
 {{% cv_job %}}
 ## December 2014 – Present
-
 {{% /cv_job %}}
 
 

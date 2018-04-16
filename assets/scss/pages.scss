@@ -34,7 +34,17 @@ main.page {
  *	Projects
  */
 main.projects {
-  max-width: $units * 67.5;
+  max-width: 80rem;
+  padding: 0;
+
+  h1,
+  h2 {
+    color: $green;
+  }
+
+  h2 {
+    margin: 0;
+  }
 }
 
 /**

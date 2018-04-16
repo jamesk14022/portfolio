@@ -12,6 +12,7 @@ params:
   title_first:   "James"
   title_last:    "Kingsbury"
   no_index:      true
+  cl_image_base: "/imgs/"
 
 menu:
   main:

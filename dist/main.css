@@ -659,6 +659,47 @@ section.cv-job {
     justify-content: center; }
 
 /**
+ *  Nested section for the project overview.
+ */
+section.project {
+  display: flex;
+  flex-direction: row;
+  margin-left: 4rem;
+  width: 70%; }
+  section.project figure {
+    background-color: #0c2606;
+    align-self: flex-start; }
+    section.project figure img {
+      display: block;
+      width: 12.5rem;
+      height: auto; }
+  section.project aside {
+    width: 100%;
+    max-width: 70rem; }
+  @media screen and (min-width: 0) and (max-width: 63.95rem) {
+    section.project aside {
+      padding: 0 1rem; } }
+  @media screen and (min-width: 0) and (max-width: 79.95rem) {
+    section.project {
+      flex-direction: column; }
+      section.project figure {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 2rem; } }
+  @media screen and (min-width: 64rem) {
+    section.project {
+      align-items: center; } }
+  @media screen and (min-width: 80rem) {
+    section.project {
+      flex-direction: row-reverse; }
+      section.project figure {
+        width: 12.5rem;
+        margin-left: 2.5rem; } }
+  section.project:last-child {
+    margin-bottom: 0; }
+
+/**
  *	Pages
  */
 /**
@@ -689,7 +730,13 @@ main.page {
  *	Projects
  */
 main.projects {
-  max-width: 67.5rem; }
+  max-width: 80rem;
+  padding: 0; }
+  main.projects h1,
+  main.projects h2 {
+    color: #1f3605; }
+  main.projects h2 {
+    margin: 0; }
 
 /**
  *	CV

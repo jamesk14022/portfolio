@@ -1,7 +1,7 @@
 {{ $base 	:= .Site.Params.cl_image_base }}
 {{ $image 	:= .Get "image" }}
-<section class="cv-job {{ if not $image }}no-image{{ end }}">
-	{{ if $image }}
+<hr>
+<section class="project image">
 		<figure class="animated-card">
 			<img
 				src="{{ $base }}{{ $image }}" 
@@ -9,7 +9,6 @@
 				alt="Logo"
 			/>
 		</figure>
-	{{ end }}
 	<aside>
 		{{ .Inner }}
 	</aside>
