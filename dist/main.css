@@ -664,8 +664,8 @@ section.cv-job {
 section.project {
   display: flex;
   flex-direction: row;
-  margin-left: 4rem;
-  width: 70%; }
+  margin: 2rem 6rem;
+  width: 100%; }
   section.project figure {
     background-color: #0c2606;
     align-self: flex-start; }
@@ -737,6 +737,51 @@ main.projects {
     color: #1f3605; }
   main.projects h2 {
     margin: 0; }
+  main.projects * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+  main.projects dl {
+    font-size: 0;
+    position: relative;
+    width: 600px;
+    height: 100%;
+    padding-top: 360px;
+    white-space: nowrap; }
+  main.projects dl:before {
+    content: "Hover a thumbnail";
+    position: absolute;
+    font: 48px Tahoma;
+    display: block;
+    top: 150px;
+    color: #d8d8d8;
+    text-shadow: 1px 1px 3px #666;
+    width: 100%;
+    text-align: center; }
+  main.projects dt, main.projects dd {
+    margin: 0;
+    padding: 0; }
+  main.projects dl img {
+    max-width: 100%; }
+  main.projects dd img {
+    border: 2px #fff solid; }
+  main.projects dt {
+    border: 1px #ccc solid;
+    display: inline-block;
+    height: 100px;
+    width: 25%;
+    border: 2px #fff solid; }
+  main.projects dt:last-of-type,
+  main.projects dt:first-of-type {
+    border-color: transparent; }
+  main.projects dd {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 1s opacity; }
+  main.projects dt:hover + dd,
+  main.projects dd:target {
+    opacity: 1; }
 
 /**
  *	CV

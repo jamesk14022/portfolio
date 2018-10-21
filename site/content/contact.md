@@ -1,7 +1,7 @@
 ---
-title: 			"Work with me"
+title: 			"Contact Me"
 description: 	"I am currently a full-time student"
-identifier:		"hire-me"
+identifier:		"contact"
 ---
 
 ## Want to Work Together?
