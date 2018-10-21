@@ -47,61 +47,16 @@ main.projects {
     margin: 0;
   }
 
-    * { 
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  }
-
-  dl {
-    font-size: 0;
-    position: relative;
-    width: 500px;
-    height: 100%;
-    padding-top: 360px;
-    white-space: nowrap;
-  }
-
-  dl:before {
-    content: "Hover a thumbnail";
-    position: absolute;
-    font: 48px Tahoma;
-    display: block;
-    top: 150px;
-    color: #d8d8d8;
-    text-shadow: 1px 1px 3px #666;
+  img.thumb{
+    display: inline;
+    max-width: 100px;
     width: 100%;
-    text-align: center;
   }
 
-  dt, dd { margin: 0; padding: 0;}
-  dl img {  max-width: 100%; }
-
-  dd img {
-     border:2px #fff solid;
-  }
-
-  dt {
-    border: 1px #ccc solid;
-    display: inline-block;
-    height: 100px;
-    width: 25%;
-    border:2px #fff solid;
-  }
-
-  dt:last-of-type,
-  dt:first-of-type { border-color: transparent;}
-
-  dd {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transition: 1s opacity;
-  }
-
-  dt:hover + dd,
-  dd:target {
-    opacity: 1;
+  img.full-size-image{
+    width: 500px;
+    height: auto;
+    display: block;
   }
 }
 

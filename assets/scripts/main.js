@@ -15,7 +15,13 @@ import {
   toggleShadow
 } from './menu';
 
+import projectOnLoad from './projects';
+
 onload = () => {
+
+  if(document.getElementsByClassName('project')){
+    projectOnLoad();
+  }
 
   /**
    *	Monitor tap/click on header button
@@ -73,3 +79,7 @@ onload = () => {
   }
 
 };
+
+const onProjectLoad = () => projectOnLoad();
+
+

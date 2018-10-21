@@ -1,26 +1,20 @@
 {{ $base := .Site.Params.cl_image_base }}
-{{ $image1 := .Get "image1" }}
-{{ $image2 := .Get "image2" }}
-{{ $image3 := .Get "image3" }}
-{{ $image4 := .Get "image4" }}
+{{ $index := .Get "index" }}
 
 <hr>
 <section class="project image">
-	<div>
-	<dl id="simple-gallery">
-	  <dt tabindex="1">
-	   <img src="{{ $image1 }}" />
-	  </dt>
-	  <dd id="img1"><img src="{{ $image1 }}"></dd>
-	  <dt tabindex="2"><img src="{{ $image2 }}"></dt>
-	    <dd id="img2"><img src="{{ $image2 }}">
-	  <dt tabindex="3"><img src="{{ $image3 }}"></dt>
-	    <dd id="img3"><img src="{{ $image3 }}"></dd>
-	  <dt tabindex="4"><img src="{{ $image4 }}"></dt>
-	  <dd  id="img4"><img src="{{ $image4 }}"></dd>
-	 </dl>
+	<div class='gallery' name='gallery{{ $index }}' id='gallery{{ $index }}'>
+	  <img class='full-size-image' />
+	  <div id="thumbnails">
+		<img name='thumb0' class='thumb' />		
+		<img name='thumb1' class='thumb' />
+		<img name='thumb2' class='thumb' />
+		<img name='thumb3' class='thumb' />
+	  </div>
 	</div>
 	<aside>
 		{{ .Inner }}
 	</aside>
 </section>
+
+
