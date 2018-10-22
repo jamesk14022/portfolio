@@ -19,7 +19,7 @@ import projectOnLoad from './projects';
 
 onload = () => {
 
-  if(document.getElementsByClassName('project')){
+  if(document.getElementsByClassName('project').length !== 0){
     projectOnLoad();
   }
 

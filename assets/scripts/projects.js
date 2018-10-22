@@ -28,6 +28,16 @@ var state = [
       {  url: "https://res.cloudinary.com/hccxvb0bt/image/upload/v1540130218/portfolio/3d-loader/stluploader5.png" }
     ],
     thumbnails: []
+  },
+  {
+    images: [
+      {  url: "https://res.cloudinary.com/hccxvb0bt/image/upload/v1540212770/portfolio/wpPluginDev/Screen_Shot_2017-07-20_at_14.29.05.png" }, 
+      {  url: "https://res.cloudinary.com/hccxvb0bt/image/upload/v1540212771/portfolio/wpPluginDev/Screen_Shot_2017-07-20_at_22.25.06.png" }, 
+      {  url: "https://res.cloudinary.com/hccxvb0bt/image/upload/v1540212770/portfolio/wpPluginDev/Screen_Shot_2017-07-20_at_22.24.46.png" }, 
+      {  url: "https://res.cloudinary.com/hccxvb0bt/image/upload/v1540212740/portfolio/wpPluginDev/Screen_Shot_2017-07-10_at_21.01.30.png" }, 
+      {  url: "https://res.cloudinary.com/hccxvb0bt/image/upload/v1540212740/portfolio/wpPluginDev/Screen_Shot_2017-07-10_at_21.05.37.png" }
+    ],
+    thumbnails: []
   }
 ];
 
@@ -96,7 +106,7 @@ const closest = (el, selector) => {
 }
 
 var onProjectLoad = () => {
-  let galleryRootElements = [document.querySelector('#gallery0'), document.querySelector('#gallery1'), document.querySelector('#gallery2')];
+  let galleryRootElements = [document.querySelector('#gallery0'), document.querySelector('#gallery1'), document.querySelector('#gallery2'), document.querySelector('#gallery3')];
   
   galleryRootElements.map((gallery, galleryIndex) => {
     //load thumbnail elements and full size elements into state

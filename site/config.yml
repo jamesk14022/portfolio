@@ -7,7 +7,7 @@ watch:                  true
 preservetaxonomynames:  true
 
 params:
-  description:   "Full stack web developer based in the UK"
+  description:   "Full stack developer based in the UK"
   author:        "James Kingsbury"
   title_first:   "James"
   title_last:    "Kingsbury"

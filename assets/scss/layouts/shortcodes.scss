@@ -224,8 +224,12 @@ section.project {
   }
 
   aside {
-    width: 100%;
+    width: 90%;
     max-width: 70rem;
+  }
+
+  img.thumb{
+    margin-right: 20px;
   }
 
   @include break(min-max, 0, $break-3) {
